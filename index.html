@@ -646,14 +646,28 @@
 
 <script>
   (function () {
+    function startPulseAfterPop(step) {
+      var icon = step.querySelector('.process-icon');
+      if (!icon) return;
+      icon.addEventListener('animationend', function onPop(e) {
+        if (e.animationName === 'process-icon-pop') {
+          icon.classList.add('pulsing');
+          icon.removeEventListener('animationend', onPop);
+        }
+      });
+    }
     if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('.process-step').forEach(function (el) { el.classList.add('in-view'); });
+      document.querySelectorAll('.process-step').forEach(function (el) {
+        el.classList.add('in-view');
+        startPulseAfterPop(el);
+      });
       return;
     }
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
+          startPulseAfterPop(entry.target);
           observer.unobserve(entry.target);
         }
       });

@@ -406,19 +406,30 @@ section{padding:80px 6vw;}
   color:var(--green-dark);
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 6px 20px rgba(23,52,39,.1);
-  animation:process-icon-pulse 2.4s ease-in-out infinite;
+  transform:scale(0);
+  opacity:0;
   transition:border-color .6s ease-out;
 }
 .process-step.in-view .process-icon{
   border-color:var(--green-dark);
+  animation:process-icon-pop .7s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+.process-step.in-view .process-icon.pulsing{
+  animation:process-icon-pulse 2.4s ease-in-out infinite;
+}
+@keyframes process-icon-pop{
+  0%{transform:scale(0);opacity:0;}
+  60%{transform:scale(1.15);opacity:1;}
+  80%{transform:scale(.92);}
+  100%{transform:scale(1);opacity:1;}
 }
 @keyframes process-icon-pulse{
-  0%,100%{transform:scale(1);}
-  50%{transform:scale(1.08);}
+  0%,100%{transform:scale(1);opacity:1;}
+  50%{transform:scale(1.08);opacity:1;}
 }
 @media (prefers-reduced-motion:reduce){
   .process-step{opacity:1;transform:none;}
-  .process-icon{animation:none;}
+  .process-icon{opacity:1;transform:scale(1);animation:none;}
 }
 .step-num{
   position:absolute;top:-6px;right:-6px;
