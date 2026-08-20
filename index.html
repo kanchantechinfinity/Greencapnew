@@ -78,8 +78,8 @@
   <div class="hero-inner">
     <div class="hero-text">
       <p class="eyebrow">No Insurance, No Waiting Rooms</p>
-      <h1><span id="tw-h1-line1" data-typewriter="Your Health,"></span><br><em class="tw-cursor" id="tw-h1-line2" data-typewriter="Simplified."></em></h1>
-      <p class="lead tw-cursor" id="tw-lead" data-typewriter="Affordable, personalized care from the comfort of your home."></p>
+      <h1><span id="tw-h1-line1" data-typewriter="Your Health,">Your Health,</span><br><em class="tw-cursor" id="tw-h1-line2" data-typewriter="Simplified."></em></h1>
+      <p class="lead" id="tw-lead" data-typewriter="Affordable, personalized care from the comfort of your home.">Affordable, personalized care from the comfort of your home.</p>
     </div>
     <div class="hero-media">
       <img class="hero-photo" src="GREEN%20CAP%20CREATIVES_12_3.png" alt="Patient on a Green Cap telehealth video visit">
@@ -680,21 +680,14 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    var line1 = document.getElementById('tw-h1-line1');
     var line2 = document.getElementById('tw-h1-line2');
-    var lead = document.getElementById('tw-lead');
-    if (!line1 || !line2 || !lead) return;
+    if (!line2) return;
 
     (async function loop() {
       while (true) {
-        await typeText(line1, 60);
         await typeText(line2, 60);
-        await sleep(200);
-        await typeText(lead, 20);
         await sleep(1800);
-        await eraseText(lead, 15);
         await eraseText(line2, 40);
-        await eraseText(line1, 40);
         await sleep(400);
       }
     })();
