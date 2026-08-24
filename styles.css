@@ -389,6 +389,31 @@ section{padding:80px 6vw;}
   padding:20px;
 }
 
+.calc-badge{
+  position:absolute;
+  top:-22px;right:-22px;
+  width:100px;height:100px;
+  border-radius:20px;
+  overflow:hidden;
+  background:#fff;
+  border:3px solid var(--cream);
+  box-shadow:0 10px 28px rgba(23,52,39,.18);
+  z-index:2;
+}
+.calc-badge-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:contain;
+  padding:10px;
+  transition:opacity .3s ease;
+}
+.calc-badge-img--hover{opacity:0;}
+.calc-badge:hover .calc-badge-img--default{opacity:0;}
+.calc-badge:hover .calc-badge-img--hover{opacity:1;}
+@media (max-width:640px){
+  .calc-badge{width:76px;height:76px;top:-14px;right:-14px;}
+}
+
 .process-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
