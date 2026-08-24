@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260824-6">
+<link rel="stylesheet" href="styles.css?v=20260824-7">
 
 <!-- === Assets ported from GC1 (Greencap) for the sections below === -->
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
@@ -608,59 +608,6 @@
   </div>
 </section>
 
-<!-- ============ SECTION : COMMON QUESTIONS ============ -->
-<section class="cq-section">
-  <div class="cq-head">
-    <h2>Common Questions</h2>
-    <p>Find clarity on prescriptions, pricing, and what to expect from your first visit. We're here to guide you through it.</p>
-  </div>
-  <div class="cq-grid">
-    <div class="cq-list">
-      <div class="cq-item">
-        <button type="button" class="cq-question">
-          How does a Green Cap prescription work with medication I'm already taking?
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="cq-answer"><p>Your provider reviews your full medical history, including current medications, before prescribing anything — so any interactions are caught up front, not after the fact.</p></div>
-      </div>
-      <div class="cq-item">
-        <button type="button" class="cq-question">
-          Do you accept health insurance?
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="cq-answer"><p>No — Green Cap is self-pay only. No insurance needed, no claims, no surprise bills. What you see at checkout is what you pay.</p></div>
-      </div>
-      <div class="cq-item">
-        <button type="button" class="cq-question">
-          What does the lab work panel actually check?
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="cq-answer"><p>The standard panel covers a Lipid Panel, Comprehensive Metabolic Panel, A1c, Thyroid + TSH, and a CBC — a full baseline for your provider to work from.</p></div>
-      </div>
-      <div class="cq-item">
-        <button type="button" class="cq-question">
-          How long until I see results from my treatment?
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="cq-answer"><p>It depends on the treatment — your provider will set expectations for your specific plan, and biweekly check-ins keep track of your progress along the way.</p></div>
-      </div>
-    </div>
-    <div class="cq-side">
-      <div class="cq-side-photo">
-        <span class="material-symbols-outlined cq-side-icon">forum</span>
-      </div>
-      <div class="cq-chat-card">
-        <span class="cq-chat-icon">GC</span>
-        <div>
-          <span class="cq-chat-label">Still need help?</span>
-          <strong>Chat with Care</strong>
-        </div>
-        <button type="button" class="cq-chat-btn">Start Conversation</button>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="footer-top">
@@ -727,13 +674,6 @@
       });
     });
   }
-
-  document.querySelectorAll('.cq-item').forEach(function (item) {
-    var question = item.querySelector('.cq-question');
-    question.addEventListener('click', function () {
-      item.classList.toggle('open');
-    });
-  });
 
   var copyBtn = document.getElementById('referralCopyBtn');
   if (copyBtn) {
