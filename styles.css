@@ -26,6 +26,7 @@ section{padding:80px 6vw;}
 /* ================= LOGO (shared) ================= */
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
 .logo-img{height:40px;width:auto;display:block;border-radius:4px;}
+.logo-img--footer{background:#fff;border-radius:8px;padding:4px 8px;}
 
 /* ================= HEADER ================= */
 .site-header{
@@ -99,6 +100,8 @@ section{padding:80px 6vw;}
   gap:16px;padding:26px 0;font-size:.8rem;color:#a9b6ad;
 }
 .footer-bottom .disclaimer{flex-basis:100%;order:3;font-size:.75rem;color:#8ea092;line-height:1.5;max-width:90ch;}
+.footer-bottom p a{color:#dfe6e0;text-decoration:underline;text-decoration-color:rgba(223,230,224,.4);}
+.footer-bottom p a:hover{color:#fff;}
 .footer-links{display:flex;gap:18px;}
 .footer-links a{color:#a9b6ad;}
 .footer-links a:hover{color:#fff;}
