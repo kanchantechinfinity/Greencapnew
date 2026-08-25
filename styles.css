@@ -510,44 +510,47 @@ section{padding:80px 6vw;}
 .btn-cta{padding:16px 36px;font-size:1rem;}
 
 /* ================= LAB WORK ================= */
-.lab-section{background:var(--cream);padding:0;}
-.lab-card{
-  width:100vw;position:relative;left:50%;right:50%;
-  margin-left:-50vw;margin-right:-50vw;
-  display:grid;grid-template-columns:1fr 1fr;
-  background:#fff;
-}
-.lab-visual{
-  background:linear-gradient(160deg,var(--green-dark),var(--green-mid));
-  display:flex;align-items:center;justify-content:center;
-  min-height:480px;
-}
-.lab-visual-icon{font-size:96px;color:rgba(255,255,255,.9);}
-.lab-content{padding:64px 6vw;max-width:640px;}
+.lab-section{background:var(--cream);}
+.lab-head{max-width:640px;margin:0 auto 48px;}
 .lab-badge{
   display:inline-flex;align-items:center;gap:6px;
   background:var(--cream-2);color:var(--green-dark);
   font-size:.78rem;font-weight:700;padding:6px 14px;
-  border-radius:999px;margin-bottom:18px;
+  border-radius:999px;margin-bottom:16px;
 }
 .lab-badge .material-symbols-outlined{font-size:16px;}
-.lab-content h2{font-size:1.5rem;font-weight:600;color:var(--green-dark);text-transform:uppercase;letter-spacing:.02em;margin-bottom:14px;}
-.lab-price{font-size:1rem;color:var(--green-dark);margin-bottom:10px;}
-.lab-price strong{font-size:1.3rem;}
-.lab-location{display:flex;align-items:center;gap:6px;color:#57614f;font-size:.88rem;margin-bottom:24px;}
-.lab-included{background:var(--cream-2);border-radius:20px;padding:22px 24px;margin-bottom:28px;}
-.lab-included-title{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#57614f;margin-bottom:14px;}
-.lab-included ul{display:flex;flex-direction:column;gap:11px;}
-.lab-included li{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--green-dark);font-weight:500;}
-.lab-included li svg{color:var(--green-mid);flex-shrink:0;}
-.lab-cta{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--green-dark);color:#fff;
-  padding:14px 28px;border-radius:999px;
-  font-weight:600;font-size:.92rem;
-  transition:background .2s ease;
+.lab-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--green-dark);font-weight:500;margin-bottom:12px;}
+.lab-head p{color:#57614f;font-size:.95rem;line-height:1.6;}
+.lab-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:start;}
+.lab-side{position:relative;}
+.lab-side-photo{
+  aspect-ratio:4/5;border-radius:24px;
+  overflow:hidden;
+  background:var(--green-dark);
 }
-.lab-cta:hover{background:var(--green-mid);}
+.lab-side-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.lab-float-card{
+  position:absolute;bottom:20px;left:20px;right:20px;
+  background:#fff;border-radius:18px;padding:16px 18px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 10px 30px rgba(23,52,39,.15);
+}
+.lab-float-label{display:block;font-size:.75rem;color:#8a9186;}
+.lab-float-card strong{display:block;font-size:.88rem;color:var(--green-dark);}
+.lab-float-btn{
+  margin-left:auto;background:var(--green-dark);color:#fff;
+  font-size:.78rem;font-weight:600;padding:8px 16px;border-radius:999px;
+  white-space:nowrap;transition:background .2s ease;
+}
+.lab-float-btn:hover{background:var(--green-mid);}
+.lab-list{display:flex;flex-direction:column;gap:14px;}
+.lab-list-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#57614f;margin-bottom:2px;}
+.lab-row{
+  display:flex;align-items:center;gap:12px;
+  background:var(--cream-2);border-radius:16px;
+  padding:20px 22px;font-size:.95rem;font-weight:600;color:var(--green-dark);
+}
+.lab-row svg{color:var(--green-mid);flex-shrink:0;}
 
 /* ================= REFERRAL ================= */
 .referral-section{background:var(--cream);}
@@ -590,11 +593,11 @@ section{padding:80px 6vw;}
 }
 .referral-icons button:hover{color:var(--green-dark);border-color:var(--green-dark);}
 .referral-visual{
-  background:linear-gradient(150deg,var(--green-mid),var(--green-dark));
-  display:flex;align-items:center;justify-content:center;
+  background:var(--green-dark);
+  overflow:hidden;
   min-height:320px;
 }
-.referral-visual-icon{font-size:88px;color:rgba(255,255,255,.9);}
+.referral-visual img{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:1024px){
@@ -625,8 +628,10 @@ section{padding:80px 6vw;}
   .promo-tile--small{grid-column:auto;grid-row:auto !important;}
   .review-grid{grid-template-columns:repeat(2,1fr);}
   .story-photos{grid-template-columns:repeat(3,1fr);}
-  .lab-card,.referral-card{grid-template-columns:1fr;}
-  .lab-visual,.referral-visual{min-height:220px;}
+  .referral-card{grid-template-columns:1fr;}
+  .referral-visual{min-height:220px;}
+  .lab-grid{grid-template-columns:1fr;}
+  .lab-side-photo{aspect-ratio:16/9;}
   .process-grid{grid-template-columns:repeat(2,1fr);row-gap:40px;}
 }
 @media (max-width:640px){
