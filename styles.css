@@ -517,7 +517,7 @@ section{padding:80px 6vw;}
 .btn-cta{padding:16px 36px;font-size:1rem;}
 
 /* ================= LAB WORK ================= */
-.lab-section{background:var(--cream);}
+.lab-section{background:#f5f2ea;}
 .lab-head{max-width:640px;margin:0 auto 48px;}
 .lab-badge{
   display:inline-flex;align-items:center;gap:6px;
@@ -529,9 +529,10 @@ section{padding:80px 6vw;}
 .lab-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--green-dark);font-weight:500;margin-bottom:12px;}
 .lab-head p{color:#57614f;font-size:.95rem;line-height:1.6;}
 .lab-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:stretch;}
-.lab-side{position:relative;display:flex;}
+.lab-side{position:relative;min-height:320px;}
 .lab-side-photo{
-  flex:1;border-radius:24px;
+  position:absolute;inset:0;
+  border-radius:24px;
   overflow:hidden;
   background:var(--green-dark);
 }
@@ -638,7 +639,7 @@ section{padding:80px 6vw;}
   .referral-card{grid-template-columns:1fr;}
   .referral-visual{min-height:220px;}
   .lab-grid{grid-template-columns:1fr;}
-  .lab-side-photo{aspect-ratio:16/9;}
+  .lab-side{min-height:0;aspect-ratio:16/9;}
   .process-grid{grid-template-columns:repeat(2,1fr);row-gap:40px;}
 }
 @media (max-width:640px){
